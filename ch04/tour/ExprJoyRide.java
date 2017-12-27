@@ -16,7 +16,7 @@ public class ExprJoyRide {
             is = new FileInputStream(inputFile);
         }
         //ANTLRInputStream input = new ANTLRInputStream(is);
-        
+
         // create a lexer that feeds off of input
         ExprLexer lexer = new ExprLexer(CharStreams.fromStream(is, StandardCharsets.UTF_8));
 
