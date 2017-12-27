@@ -11,6 +11,7 @@ public class Translate {
 
         // create a lexer that feeds off of input CharStream
         ArrayInitLexer lexer = new ArrayInitLexer(CharStreams.fromStream(input, StandardCharsets.UTF_8));
+
         // create a buffer of tokens pulled from the lexer
         CommonTokenStream tokens = new CommonTokenStream(lexer);
 
