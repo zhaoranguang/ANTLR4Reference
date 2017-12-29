@@ -1,0 +1,7 @@
+digraph G {
+        rankdir=LR;
+        main [shape=box];
+        main -> f -> g;
+        f -> f [style=dotted];
+        f -> h;
+}
