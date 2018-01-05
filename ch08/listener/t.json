@@ -1,0 +1,7 @@
+{
+    "description" : "An imaginary server confing file",
+    "logs" : {"level": "verbose", "dir": "/var/log"},
+    "host" : "antlr.org",
+    "admin" : ["parrt", "tombu"],
+    "aliases" : []
+}
