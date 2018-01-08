@@ -1,0 +1,12 @@
+int x;
+int y;
+void a()
+{
+  int x;
+  x = 1;    // x resolves to current scope, not x in globalscope
+  y = 2;    // y is not found in current scope, but resolves in global
+  { int y = x; }
+}
+void b(int z)
+{}
+
