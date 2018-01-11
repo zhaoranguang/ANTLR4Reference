@@ -1,0 +1,13 @@
+T__0=1
+T__1=2
+ID=3
+INT=4
+CHAR=5
+WS=6
+BEGIN=7
+END=8
+IF=9
+THEN=10
+WHILE=11
+'='=1
+';'=2
