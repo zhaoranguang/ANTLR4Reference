@@ -26,5 +26,7 @@ public class Col {
         RowsParser parser = new RowsParser(tokens, col);
         parser.setBuildParseTree(false);   // don't waste time building a tree
         parser.file();
+
+
     }
 }

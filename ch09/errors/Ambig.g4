@@ -1,3 +1,4 @@
+
 grammar Ambig;
 
 stat

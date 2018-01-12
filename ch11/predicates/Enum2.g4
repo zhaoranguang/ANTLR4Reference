@@ -14,17 +14,18 @@ stat
     ;
 
 expr
-    : ID
+    : id
     | INT
     ;
 
 enumDecl
-    : 'enum' name=ID '{' ID (',' ID)* '}'
+    : {java5}? 'enum' name=id '{' id (',' id)* '}' 
       {System.out.println("enum "+$name.text);}
     ;
 
-ENUM
-    : 'enum' {java5}?
+id
+    : ID
+    | {!java5}? 'enum'
     ;
 
 ID

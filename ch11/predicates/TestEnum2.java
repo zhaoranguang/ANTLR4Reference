@@ -6,9 +6,9 @@ import java.io.InputStream;
 public class TestEnum2 {
     public static void main(String[] args) throws Exception {
         int i = 0;
-        Enum2Parser.java5 = false;   // here we assume non-Java5 mode by default
+        EnumParser.java5 = false;   // here we assume non-Java5 mode by default
         if (args.length > 0 && args[i].equals("-java5")) {
-            Enum2Parser.java5 = true;
+            EnumParser.java5 = true;
             i++;
         }
         String inputFile = null;
@@ -18,9 +18,9 @@ public class TestEnum2 {
             is= new FileInputStream(inputFile);
         }
         ANTLRInputStream input = new ANTLRInputStream(is);
-        Enum2Lexer lexer = new Enum2Lexer(input);
+        EnumLexer lexer = new EnumLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        Enum2Parser parser = new Enum2Parser(tokens);
+        EnumParser parser = new EnumParser(tokens);
         parser.prog();
     }
 }
