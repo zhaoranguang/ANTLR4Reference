@@ -1,0 +1,3 @@
+enum Temp { HOT, COLD }
+
+
