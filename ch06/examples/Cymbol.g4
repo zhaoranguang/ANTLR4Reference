@@ -42,6 +42,5 @@ exprList
 
 ID        : LETTER (LETTER|DIGIT)* ;
 fragment LETTER : [a-zA-Z\u0080-\u00FF] ;
-NUMBER    : '-'? ('.' DIGIT+ | DIGIT+ ('.' DIGIT*)?) ;
 fragment DIGIT  : [0-9] ;
 INT       : '-'? DIGIT+ ;

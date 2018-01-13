@@ -1,5 +1,10 @@
 grammar Cymbol ;
 
+@lexer::members {
+    public static final int WHITESPACE = 1;
+    public static final int COMMENTS = 2;
+}
+
 file    : (functionDecl | varDecl)+ ;
 
 varDecl
@@ -56,7 +61,8 @@ fragment LETTER : [a-zA-Z\u0080-\u00FF] ;
 INT             : '-'? DIGIT+ ;
 fragment DIGIT  : [0-9] ;
 
-WS              : [ \t\n\r]+ -> skip;
+WS              : [ \t\n\r]+ -> channel(1);
 
-LINE_COMMENT    : '//' .*? '\r'? '\n' -> skip; // Match "//" stuff '\n'
+SL_COMMENT      : '//' .*? '\r'? '\n' -> channel(2); // Match "//" stuff '\n'
+
 COMMENT         : '/*' .*? '*/'       -> skip; // Match "/*" stuff "*/"
