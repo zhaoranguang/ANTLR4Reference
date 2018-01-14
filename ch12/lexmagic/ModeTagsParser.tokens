@@ -1,0 +1,8 @@
+OPEN=1
+TEXT=2
+CLOSE=3
+SLASH=4
+ID=5
+'<'=1
+'>'=3
+'/'=4
